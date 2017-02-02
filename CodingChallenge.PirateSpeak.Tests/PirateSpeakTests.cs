@@ -15,7 +15,8 @@ namespace CodingChallenge.PirateSpeak.Tests
         public void TestPirateVocabulary(string jumble, string[] dictionary, object expectedResult)
         {
             var actualResult = new Solution().GetPossibleWords(jumble, dictionary);
-            actualResult.ShouldBeTheSameAs(expectedResult);
+            // actualResult.ShouldBeTheSameAs(expectedResult); // Doesn't seem to work correctly
+            Assert.Equal(actualResult, expectedResult); // 
         }
     }
 }
